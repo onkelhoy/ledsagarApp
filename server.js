@@ -4,6 +4,7 @@ const path = require('path')
 const session = require('express-session')
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv')
+const flash = require('flash')
 // locals
 const log = require('./util/log/log.js')
 
@@ -12,6 +13,7 @@ const app = express()
 
 // inits
 dotenv.config()
+app.enable('strict-routing') // because I care ^^
 
 // set
 app.set('views', path.join(__dirname, 'views'))
@@ -32,6 +34,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
+app.use(flash(app))
 app.use('/', require('./routes/index.js'))
 
 app.listen(process.env.PORT, u => log('listening on port*', process.env.PORT))

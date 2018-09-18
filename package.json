@@ -4,17 +4,25 @@
   "description": "app for my job to no longer deal with paper work...",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mongoose": "^5.2.15",
     "path": "^0.12.7",
+    "pm2": "^3.1.2",
     "pug": "^2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js --watch",
+    "prod": "pm2 start server.js"
   },
   "repository": {
     "type": "git",
