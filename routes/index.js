@@ -1,8 +1,10 @@
 const express = require('express')
 const route = express.Router()
 
+route.use('/login', require('./login'))
+
 route.use('/', function (req, res, next) {
-  if (!req.session.login)
+  if (!req.session.credentials)
     return res.redirect('/login')
 
   next()
@@ -10,7 +12,7 @@ route.use('/', function (req, res, next) {
 
 
 route.get('/', function (req, res) {
-  res.render('main', { title: 'Startsida' })
+  res.render('home', { title: 'Startsida' })
 })
 
 module.exports = route
