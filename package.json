@@ -1,0 +1,29 @@
+{
+  "name": "ledsagareapp",
+  "version": "1.0.0",
+  "description": "app for my job to no longer deal with paper work...",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onkelhoy/ledsagarApp.git"
+  },
+  "author": "Henry Pap",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/onkelhoy/ledsagarApp/issues"
+  },
+  "homepage": "https://github.com/onkelhoy/ledsagarApp#readme"
+}
