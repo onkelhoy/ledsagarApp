@@ -3,6 +3,7 @@ function getGeoLocation (callback) {
     navigator.geolocation.getCurrentPosition(callback, handleGeoError)
 }
 function handleGeoError (error) {
+  console.log(error)
   switch (error.code) {
     case error.PERMISION_DENIED:
       popup('User denied the request for Geolocation.', 'error'); break;
