@@ -10,11 +10,11 @@ route.use('/', function (req, res, next) {
     res.redirect('/')
   }
   */
-  if (!req.session.credentials) {
+  /*if (!req.session.credentials) {
     req.flash('warning', 'you need to login first')
     res.redirect('/login')
     return
-  }
+  }*/
 
   next()
 })

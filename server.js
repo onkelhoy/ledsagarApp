@@ -1,16 +1,22 @@
 // imports
-const express = require('express')
-const path = require('path')
-const session = require('express-session')
+const express    = require('express')
+const path       = require('path')
+const session    = require('express-session')
 const bodyParser = require('body-parser')
-const dotenv = require('dotenv')
-const flash = require('flash')
+const dotenv     = require('dotenv')
+const flash      = require('connect-flash')
+const https      = require('https')
+const fs         = require('fs')
 // locals
 const log = require('./util/log/log.js')
 
 // variable defines
 const app = express()
-
+/*const credentials = {
+  key: fs.readFileSync(path.join(__dirname, 'server.key')),
+  cert: fs.readFileSync(path.join(__dirname, 'server.csr'))
+}
+const server = https.createServer(credentials, app)*/
 // inits
 dotenv.config()
 app.enable('strict-routing') // because I care ^^

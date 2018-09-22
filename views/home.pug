@@ -1,4 +1,11 @@
 extends layout.pug
 
+block links 
+  link(rel='stylesheet' href='/css/home.css')
 block scripts 
-  
+  script(src='/js/map.js')
+  script(src='/js/home.js')
+
+block body 
+  button(class='main noSelect') in
+    

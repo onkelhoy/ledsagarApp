@@ -1,3 +1,68 @@
-body {
-  background-color: cornflowerblue;
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+.popupContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 30vh;
+}
+.popup {
+  position: relative;
+  background-color: white;
+  width: 90%;
+  left: 5%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  padding: 15px;
+  color: white;
+}
+.popup.success {
+  background-color: #22bb33;
+}
+.popup.error {
+  background-color: #bb2124;
+}
+.popup.warning {
+  background-color: #f0ad4e;
+}
+.popup > p {
+  font-size: 12pt;
+  width: 90%;
+}
+.popup > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.popup > button::before,
+.popup > button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  transform-origin: center;
+}
+.popup > button::before {
+  transform: rotate(45deg);
+}
+.popup > button::after {
+  transform: rotate(-45deg);
 }

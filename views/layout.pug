@@ -4,10 +4,19 @@ html
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css')
     link(rel='stylesheet', href='/css/util.css')
     block links 
+    
+    script(src='/js/util.js')
     block scripts
   body
     include partials/header.pug
-    block body
+    div.popupContainer
+      template.popup
+        div.popup
+          p.text
+          button(class='close noselect') 
+          
+    div.container
+      block body
     
     include partials/footer.pug
   

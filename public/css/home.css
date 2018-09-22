@@ -1,0 +1,46 @@
+body {
+  background-color: #293249;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+button.main {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: none;
+  border-radius: 50%;
+  background-color: yellowgreen;
+
+  width: 130px;
+  height: 130px;
+  color: #eee;
+  font-size: 14pt;
+  z-index: 1;
+
+  box-shadow: 0 11px #7da330;
+}
+
+button.main:hover {
+  color: #eee;
+}
+button.main:active {
+  top: calc(50% + 5px);
+  box-shadow: 0 6px #7da330;
+}
+
+button.main.red {
+  background-color: #e14432;
+  box-shadow: 0 11px #b63527;
+}
+button.main.red:active {
+  box-shadow: 0 6px #b63527;
+}
