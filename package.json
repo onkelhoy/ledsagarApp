@@ -4,7 +4,7 @@
   "description": "app for my job to no longer deal with paper work...",
   "main": "server.js",
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
     "dotenv": "^6.0.0",
